@@ -9,8 +9,15 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        
+        LazyVStack(alignment: .leading, spacing: 15, pinnedViews: [], content: {
+            
+            ForEach(1...10, id: \.self) { count in
+                Text("Placeholder \(count)")
+            }
+            
+        })
+        .padding()
     }
 }
 
